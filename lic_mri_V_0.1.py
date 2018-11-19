@@ -221,7 +221,7 @@ ment1= tkinter.StringVar()
 iment1 = tkinter.Label(root, textvariable=ment1)
 iment1.grid(row= 2, column= 3)
 
-l2= tkinter.Label(root, text= "TE")
+l2= tkinter.Label(root, text= "ET")
 l2.grid(row= 2, column= 1)
 
 l3= tkinter.Label(root, text= "ROI")
@@ -324,11 +324,11 @@ te12.grid(row= 14, column= 1)
 roi12= tkinter.Entry(root, textvariable= roi_value12)
 roi12.grid(row= 14, column= 2)
 
-l4= tkinter.Label(root, text= "Valor do T2*")
+l4= tkinter.Label(root, text= "T2* value")
 l4.grid(row= 15, column= 1)
-l5= tkinter.Label(root, text= "Valor do R2*")
+l5= tkinter.Label(root, text= "R2* value")
 l5.grid(row= 16, column= 1)
-l6= tkinter.Label(root, text= "Valor do LIC")
+l6= tkinter.Label(root, text= "LIC value")
 l6.grid(row= 17, column= 1)
 
 ment5= tkinter.StringVar()
