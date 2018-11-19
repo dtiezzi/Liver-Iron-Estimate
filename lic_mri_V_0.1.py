@@ -3,10 +3,10 @@ import numpy as np
 
 try:
     # for Python2
-    from Tkinter import * 
+    import Tkinter as tkinter 
 except ImportError:
     # for Python3
-    from tkinter import * 
+    import tkinter
 
 def clear_text():
 	for e in entries_list:
@@ -132,228 +132,228 @@ def estimate_iron():
 
 
 
-root= Tk()
+root = tkinter.Tk()
 root.title('MRI Iron Estimation')
 #root.configure(background="gray")
 
-btn1= Button(root, text= "  # RUN! #  ", command= estimate_iron)
+btn1= tkinter.Button(root, text= "  # RUN! #  ", command= estimate_iron)
 btn1.pack()
 btn1.grid(row= 0, column= 3)
 
 
-btn2= Button(root, text= "Exit", command= client_exit)
+btn2= tkinter.Button(root, text= "Exit", command= client_exit)
 btn2.pack()
 btn2.grid(row= 19, column= 3)
 
-btn3 = Button(root, text='Clear', command= clear_text)
+btn3 = tkinter.Button(root, text='Clear', command= clear_text)
 btn3.pack()
 btn3.grid(row= 18, column= 3)
 
-l1= Label(root, text= "Number of echoes")
+l1= tkinter.Label(root, text= "Number of echoes")
 l1.grid(row= 0, column= 1)
 
-l2= Label(root, text= "File name (.png) and path (/Users/)")
+l2= tkinter.Label(root, text= "File name (.png) and path (/Users/)")
 l2.grid(row= 1, column= 1)
 
-ln1= Label(root, text= '1')
+ln1= tkinter.Label(root, text= '1')
 ln1.grid(row= 3, column= 0)
 
-ln2= Label(root, text= '2')
+ln2= tkinter.Label(root, text= '2')
 ln2.grid(row= 4, column= 0)
 
-ln3= Label(root, text= '3')
+ln3= tkinter.Label(root, text= '3')
 ln3.grid(row= 5, column= 0)
 
-ln4= Label(root, text= '4')
+ln4= tkinter.Label(root, text= '4')
 ln4.grid(row= 6, column= 0)
 
-ln5= Label(root, text= '5')
+ln5= tkinter.Label(root, text= '5')
 ln5.grid(row= 7, column= 0)
 
-ln6= Label(root, text= '6')
+ln6= tkinter.Label(root, text= '6')
 ln6.grid(row= 8, column= 0)
 
-ln7= Label(root, text= '7')
+ln7= tkinter.Label(root, text= '7')
 ln7.grid(row= 9, column= 0)
 
-ln8= Label(root, text= '8')
+ln8= tkinter.Label(root, text= '8')
 ln8.grid(row= 10, column= 0)
 
-ln9= Label(root, text= '9')
+ln9= tkinter.Label(root, text= '9')
 ln9.grid(row= 11, column= 0)
 
-ln10= Label(root, text= '10')
+ln10= tkinter.Label(root, text= '10')
 ln10.grid(row= 12, column= 0)
 
-ln11= Label(root, text= '11')
+ln11= tkinter.Label(root, text= '11')
 ln11.grid(row= 13, column= 0)
 
-ln12= Label(root, text= '12')
+ln12= tkinter.Label(root, text= '12')
 ln12.grid(row= 14, column= 0)
 
-ln13= Label(root, text= '13')
+ln13= tkinter.Label(root, text= '13')
 ln13.grid(row= 15, column= 0)
 
-ln14= Label(root, text= '14')
+ln14= tkinter.Label(root, text= '14')
 ln14.grid(row= 16, column= 0)
 
-ln15= Label(root, text= '15')
+ln15= tkinter.Label(root, text= '15')
 ln15.grid(row= 17, column= 0)
 
-ln16= Label(root, text= '16')
+ln16= tkinter.Label(root, text= '16')
 ln16.grid(row= 18, column= 0)
 
 # define entries
 
-echos_value= IntVar()
-ev= Entry(root, textvariable= echos_value)
+echos_value= tkinter.IntVar()
+ev= tkinter.Entry(root, textvariable= echos_value)
 ev.grid(row= 0, column= 2)
 
-path= StringVar()
-dir_path= Entry(root, textvariable= path)
+path= tkinter.StringVar()
+dir_path= tkinter.Entry(root, textvariable= path)
 dir_path.grid(row= 1, column= 2)
 
-ment= StringVar()
-iment = Label(root, textvariable=ment)
+ment= tkinter.StringVar()
+iment = tkinter.Label(root, textvariable=ment)
 iment.grid(row= 1, column= 3)
 
-ment1= StringVar()
-iment1 = Label(root, textvariable=ment1)
+ment1= tkinter.StringVar()
+iment1 = tkinter.Label(root, textvariable=ment1)
 iment1.grid(row= 2, column= 3)
 
-l2= Label(root, text= "TE")
+l2= tkinter.Label(root, text= "TE")
 l2.grid(row= 2, column= 1)
 
-l3= Label(root, text= "ROI")
+l3= tkinter.Label(root, text= "ROI")
 l3.grid(row= 2, column= 2)
 
 
-te_value1= DoubleVar()
-roi_value1= DoubleVar()
-te1= Entry(root, textvariable= te_value1)
+te_value1= tkinter.DoubleVar()
+roi_value1= tkinter.DoubleVar()
+te1= tkinter.Entry(root, textvariable= te_value1)
 te1.grid(row= 3, column= 1)
 
-roi1= Entry(root, textvariable= roi_value1)
+roi1= tkinter.Entry(root, textvariable= roi_value1)
 roi1.grid(row= 3, column= 2)
 
-te_value2= DoubleVar()
-roi_value2= DoubleVar()
-te2= Entry(root, textvariable= te_value2)
+te_value2= tkinter.DoubleVar()
+roi_value2= tkinter.DoubleVar()
+te2= tkinter.Entry(root, textvariable= te_value2)
 te2.grid(row= 4, column= 1)
 
-roi2= Entry(root, textvariable= roi_value2)
+roi2= tkinter.Entry(root, textvariable= roi_value2)
 roi2.grid(row= 4, column= 2)
 
-te_value3= DoubleVar()
-roi_value3= DoubleVar()
-te3= Entry(root, textvariable= te_value3)
+te_value3= tkinter.DoubleVar()
+roi_value3= tkinter.DoubleVar()
+te3= tkinter.Entry(root, textvariable= te_value3)
 te3.grid(row= 5, column= 1)
 
-roi3= Entry(root, textvariable= roi_value3)
+roi3= tkinter.Entry(root, textvariable= roi_value3)
 roi3.grid(row= 5, column= 2)
 
-te_value4= DoubleVar()
-roi_value4= DoubleVar()
-te4= Entry(root, textvariable= te_value4)
+te_value4= tkinter.DoubleVar()
+roi_value4= tkinter.DoubleVar()
+te4= tkinter.Entry(root, textvariable= te_value4)
 te4.grid(row= 6, column= 1)
 
-roi4= Entry(root, textvariable= roi_value4)
+roi4= tkinter.Entry(root, textvariable= roi_value4)
 roi4.grid(row= 6, column= 2)
 
-te_value5= DoubleVar()
-roi_value5= DoubleVar()
-te5= Entry(root, textvariable= te_value5)
+te_value5= tkinter.DoubleVar()
+roi_value5= tkinter.DoubleVar()
+te5= tkinter.Entry(root, textvariable= te_value5)
 te5.grid(row= 7, column= 1)
 
-roi5= Entry(root, textvariable= roi_value5)
+roi5= tkinter.Entry(root, textvariable= roi_value5)
 roi5.grid(row= 7, column= 2)
 
-te_value6= DoubleVar()
-roi_value6= DoubleVar()
-te6= Entry(root, textvariable= te_value6)
+te_value6= tkinter.DoubleVar()
+roi_value6= tkinter.DoubleVar()
+te6= tkinter.Entry(root, textvariable= te_value6)
 te6.grid(row= 8, column= 1)
 
-roi6= Entry(root, textvariable= roi_value6)
+roi6= tkinter.Entry(root, textvariable= roi_value6)
 roi6.grid(row= 8, column= 2)
 
-te_value7= DoubleVar()
-roi_value7= DoubleVar()
-te7= Entry(root, textvariable= te_value7)
+te_value7= tkinter.DoubleVar()
+roi_value7= tkinter.DoubleVar()
+te7= tkinter.Entry(root, textvariable= te_value7)
 te7.grid(row= 9, column= 1)
 
-roi7= Entry(root, textvariable= roi_value7)
+roi7= tkinter.Entry(root, textvariable= roi_value7)
 roi7.grid(row= 9, column= 2)
 
-te_value8= DoubleVar()
-roi_value8= DoubleVar()
-te8= Entry(root, textvariable= te_value8)
+te_value8= tkinter.DoubleVar()
+roi_value8= tkinter.DoubleVar()
+te8= tkinter.Entry(root, textvariable= te_value8)
 te8.grid(row= 10, column= 1)
 
-roi8= Entry(root, textvariable= roi_value8)
+roi8= tkinter.Entry(root, textvariable= roi_value8)
 roi8.grid(row= 10, column= 2)
 
-te_value9= DoubleVar()
-roi_value9= DoubleVar()
-te9= Entry(root, textvariable= te_value9)
+te_value9= tkinter.DoubleVar()
+roi_value9= tkinter.DoubleVar()
+te9= tkinter.Entry(root, textvariable= te_value9)
 te9.grid(row= 11, column= 1)
 
-roi9= Entry(root, textvariable= roi_value9)
+roi9= tkinter.Entry(root, textvariable= roi_value9)
 roi9.grid(row= 11, column= 2)
 
-te_value10= DoubleVar()
-roi_value10= DoubleVar()
-te10= Entry(root, textvariable= te_value10)
+te_value10= tkinter.DoubleVar()
+roi_value10= tkinter.DoubleVar()
+te10= tkinter.Entry(root, textvariable= te_value10)
 te10.grid(row= 12, column= 1)
 
-roi10= Entry(root, textvariable= roi_value10)
+roi10= tkinter.Entry(root, textvariable= roi_value10)
 roi10.grid(row= 12, column= 2)
 
-te_value11= DoubleVar()
-roi_value11= DoubleVar()
-te11= Entry(root, textvariable= te_value11)
+te_value11= tkinter.DoubleVar()
+roi_value11= tkinter.DoubleVar()
+te11= tkinter.Entry(root, textvariable= te_value11)
 te11.grid(row= 13, column= 1)
 
-roi11= Entry(root, textvariable= roi_value11)
+roi11= tkinter.Entry(root, textvariable= roi_value11)
 roi11.grid(row= 13, column= 2)
 
-te_value12= DoubleVar()
-roi_value12= DoubleVar()
-te12= Entry(root, textvariable= te_value12)
+te_value12= tkinter.DoubleVar()
+roi_value12= tkinter.DoubleVar()
+te12= tkinter.Entry(root, textvariable= te_value12)
 te12.grid(row= 14, column= 1)
 
-roi12= Entry(root, textvariable= roi_value12)
+roi12= tkinter.Entry(root, textvariable= roi_value12)
 roi12.grid(row= 14, column= 2)
 
-l4= Label(root, text= "Valor do T2*")
+l4= tkinter.Label(root, text= "Valor do T2*")
 l4.grid(row= 15, column= 1)
-l5= Label(root, text= "Valor do R2*")
+l5= tkinter.Label(root, text= "Valor do R2*")
 l5.grid(row= 16, column= 1)
-l6= Label(root, text= "Valor do LIC")
+l6= tkinter.Label(root, text= "Valor do LIC")
 l6.grid(row= 17, column= 1)
 
-ment5= StringVar()
-iment5 = Label(root, textvariable=ment5)
+ment5= tkinter.StringVar()
+iment5 = tkinter.Label(root, textvariable=ment5)
 iment5.grid(row= 15, column= 2)
 
-ment6= StringVar()
-iment6 = Label(root, textvariable=ment6)
+ment6= tkinter.StringVar()
+iment6 = tkinter.Label(root, textvariable=ment6)
 iment6.grid(row= 16, column= 2)
 
-ment7= StringVar()
-iment7 = Label(root, textvariable=ment7)
+ment7= tkinter.StringVar()
+iment7 = tkinter.Label(root, textvariable=ment7)
 iment7.grid(row= 17, column= 2)
 
 
-ment2= StringVar()
-iment2 = Label(root, textvariable=ment2)
+ment2= tkinter.StringVar()
+iment2 = tkinter.Label(root, textvariable=ment2)
 iment2.grid(row= 15, column= 3)
 
-ment3= StringVar()
-iment3 = Label(root, textvariable=ment3)
+ment3= tkinter.StringVar()
+iment3 = tkinter.Label(root, textvariable=ment3)
 iment3.grid(row= 16, column= 3)
 
-ment4= StringVar()
-iment4 = Label(root, textvariable=ment4)
+ment4= tkinter.StringVar()
+iment4 = tkinter.Label(root, textvariable=ment4)
 iment4.grid(row= 17, column= 3)
 
 entries_list = [ev, dir_path, te1, roi1, te2, roi2, te3, roi3, te4, roi4, te5, roi5, te6, roi6, te7, roi7, te8, roi8, te9, roi9, te10, roi10, te11, roi11, te12, roi12]
